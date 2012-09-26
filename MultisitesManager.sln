@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultisitesManager", "MultisitesManager.csproj", "{56D2E866-7C14-4038-9E38-324189B3BB04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56D2E866-7C14-4038-9E38-324189B3BB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D2E866-7C14-4038-9E38-324189B3BB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D2E866-7C14-4038-9E38-324189B3BB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D2E866-7C14-4038-9E38-324189B3BB04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

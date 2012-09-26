@@ -1,0 +1,184 @@
+----item----
+version: 1
+id: {BD341079-37A4-4BC9-B724-8A257B0AB74E}
+database: master
+path: /sitecore/templates/System/Site templates/Site template/__Standard Values
+parent: {E37DA970-1EE9-495B-8B34-911773ADEA82}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {E37DA970-1EE9-495B-8B34-911773ADEA82}
+templatekey: Site template
+
+----field----
+field: {81E8CDCF-97F6-4087-8928-B90035A29917}
+name: mode
+key: mode
+content-length: 1
+
+1
+----field----
+field: {8DA61799-7965-40AD-8E00-F22D48137585}
+name: database
+key: database
+content-length: 6
+
+master
+----field----
+field: {1925AF73-0EF8-49E8-8A8B-DEE8907A2F53}
+name: domain
+key: domain
+content-length: 8
+
+extranet
+----field----
+field: {FCB39913-B34B-4F91-A0B1-4284FC50BEFB}
+name: language
+key: language
+content-length: 38
+
+{AF584191-45C9-4201-8740-5409F4CF8BDD}
+----field----
+field: {D7C619B3-88AA-43C0-A42E-58059F66CDBA}
+name: physicalFolder
+key: physicalfolder
+content-length: 1
+
+/
+----field----
+field: {801A7C39-CEE4-4BC6-9C60-EEB91CAB0E46}
+name: rootPath
+key: rootpath
+content-length: 17
+
+/sitecore/content
+----field----
+field: {9DB2AF5F-E0E6-4FCC-82C8-F0ED9874ABAF}
+name: virtualFolder
+key: virtualfolder
+content-length: 1
+
+/
+----field----
+field: {4D353AC3-E0F1-453A-8CEA-43706CA0E730}
+name: cacheHtml
+key: cachehtml
+content-length: 0
+
+
+----field----
+field: {E1AED834-2E97-4A5F-AB11-0D75ABDA3B2B}
+name: cacheMedia
+key: cachemedia
+content-length: 0
+
+
+----field----
+field: {21099DC0-8CC4-44CA-B9C0-BDE887402241}
+name: allowDebug
+key: allowdebug
+content-length: 0
+
+
+----field----
+field: {5E945400-DD4B-4C6D-882C-36B73F6CA725}
+name: enableAnalytics
+key: enableanalytics
+content-length: 1
+
+1
+----field----
+field: {56559C81-F7BE-4C9B-A001-55431E59AC04}
+name: enableDebugger
+key: enabledebugger
+content-length: 0
+
+
+----field----
+field: {67E23613-6C2F-4493-A365-F5ADBDFECC55}
+name: enableLinkedItems
+key: enablelinkeditems
+content-length: 1
+
+1
+----field----
+field: {F059CA86-4A18-42A1-A911-DBC1ECF313D6}
+name: enablePreview
+key: enablepreview
+content-length: 1
+
+1
+----field----
+field: {35AE0088-1805-4698-8D99-2C99541F9E4D}
+name: enableWebEdit
+key: enablewebedit
+content-length: 1
+
+1
+----field----
+field: {A9C43306-58A4-42F8-A0E1-370A2BE40F02}
+name: enableWorkflow
+key: enableworkflow
+content-length: 0
+
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+300
+----version----
+language: en
+version: 1
+revision: 4617869f-dbb5-4769-bbee-4e6aad527f51
+
+----field----
+field: {CBCF94B9-7317-4463-B0DC-DC1515B2556A}
+name: enableFallback
+key: enablefallback
+content-length: 1
+
+1
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20111103T101048
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4617869f-dbb5-4769-bbee-4e6aad527f51
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20120330T091115:634686954750515438
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

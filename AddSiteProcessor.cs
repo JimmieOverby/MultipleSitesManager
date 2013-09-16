@@ -1,6 +1,6 @@
 /* *********************************************************************** *
  * File   : AddSiteProcessor.cs                           Part of Sitecore *
- * Version: 2.2.0                                         www.sitecore.net *
+ * Version: 2.1.0                                         www.sitecore.net *
  *                                                                         *
  *                                                                         *
  * Purpose: Represents item:added event handler                            *
@@ -9,7 +9,7 @@
  *                                                                         *
  * Status : Published.                                                     *
  *                                                                         *
- * Copyright (C) 1999-2012 by Sitecore A/S. All rights reserved.           *
+ * Copyright (C) 1999-2007 by Sitecore A/S. All rights reserved.           *
  *                                                                         *
  * This work is the property of:                                           *
  *                                                                         *
@@ -23,13 +23,17 @@
  *                                                                         *
  * *********************************************************************** */
 
-using System;
-using Sitecore.Data.Items;
-using Sitecore.Events;
-using Sitecore.Shell.Framework;
-
 namespace Sitecore.Sites
 {
+    using System;
+    using System.Collections.Generic;
+    using Configuration;
+    using Data;
+    using Sitecore.Data.Items;
+    using Sitecore.Data.Managers;
+    using Sitecore.Events;
+    using Sitecore.Shell.Framework;
+
     /// <summary>
     /// Defines the add site processor class.
     /// </summary>
@@ -44,10 +48,15 @@ namespace Sitecore.Sites
         {
             var item = Event.ExtractParameter(eventArgs, 0) as Item;
 
-            if (item == null || item.Parent == null || !item.Parent.Name.Equals("Sites")) return;
+            if (item == null || item.Parent == null || item.Parent.Name != "Sites")
+            {
+                return;
+            }
 
-            if (!item.TemplateName.Equals(MultiSitesManager.SiteDefinitionTemplateName) &&
-                !item.TemplateName.Equals(MultiSitesManager.SiteReferenceTemplateName)) return;
+            if (item.TemplateName != MultiSitesManager.SiteDefinitionTemplateName && item.TemplateName != MultiSitesManager.SiteReferenceTemplateName)
+            {
+                return;
+            }
 
             Items.MoveLast(new[] { item });
 

@@ -1,32 +1,15 @@
-﻿/* *********************************************************************** *
- * File   : ConfigSiteProviderHack.cs                     Part of Sitecore *
- * Version: 2.2.0                                         www.sitecore.net *
- *                                                                         *
- *                                                                         *
- * Purpose: Overrides ConfigSitePrivder GetSite method                     *
- *                                                                         *
- * Bugs   : None                                                           *
- *                                                                         *
- * Status : Published.                                                     *
- *                                                                         *
- * Copyright (C) 1999-2012 by Sitecore A/S. All rights reserved.           *
- *                                                                         *
- * This work is the property of:                                           *
- *                                                                         *
- *        Sitecore A/S                                                     *
- *        Meldahlsgade 5, 4.                                               *
- *        1613 Copenhagen V.                                               *
- *        Denmark                                                          *
- *                                                                         *
- * This is a Sitecore published work under Sitecore's                      *
- * shared source license.                                                  *
- *                                                                         *
- * *********************************************************************** */
-
-using Sitecore.Configuration;
-
-namespace Sitecore.Sites
+﻿namespace Sitecore.Sites
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Sitecore.Configuration;
+    using Sitecore.Sites;
+
+    /// <summary>
+    /// Defines the config site provider hack class.
+    /// </summary>
     public class ConfigSiteProviderHack : ConfigSiteProvider
     {
         /// <summary>
@@ -36,10 +19,10 @@ namespace Sitecore.Sites
         /// <returns>Site instance</returns>
         public override Site GetSite(string siteName)
         {
-            var site = base.GetSite(siteName);
+            Site site = base.GetSite(siteName);
             if (site == null)
             {
-                // Use sites from factory as fallback (since that is how the Multisite Manager registers sites)
+                // use sites from factory as fallback (since that is how the Multisite Manager registers sites)
                 var siteContext = Factory.GetSite(siteName);
                 if (siteContext != null)
                 {

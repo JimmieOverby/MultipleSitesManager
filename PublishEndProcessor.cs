@@ -1,4 +1,4 @@
-/* *********************************************************************** *
+﻿/* *********************************************************************** *
  * File   : FlushCommand.cs                               Part of Sitecore *
  * Version: 2.1.0                                         www.sitecore.net *
  *                                                                         *
@@ -23,32 +23,24 @@
  *                                                                         *
  * *********************************************************************** */
 
-namespace Sitecore.Shell.Framework.Commands
+namespace Sitecore.Sites
 {
-    using Sitecore.Shell.Framework.Commands;
-    using Sitecore.Text;
-    using Sitecore.Web.UI.Sheer;
-    using Sites;
-
+    using System;
     /// <summary>
-    /// Defines the flush command class.
+    /// Defines publish:end event
     /// </summary>
-    public class FlushCommand : Command
+    public class PublishEndProcessor
     {
-        #region overrides
-
         /// <summary>
-        /// Executes the command in the specified context.
+        /// Called when sites have been added and flushed
         /// </summary>
-        /// <param name="context">The context.</param>
-        public override void Execute(CommandContext context)
+        /// <param name="obj">The object.</param>
+        /// <param name="eventArgs">The <see cref="System.EventArgs"/> instance containing the event data.</param>
+        public void OnSitesPublished(object obj, EventArgs eventArgs)
         {
-            // updated to publish the site configuration nodes. flushing will be handled by publish end events
-            UrlString str = new UrlString(UIUtil.GetUri("control:MultisitesManager.FlushSites"));
-
-            SheerResponse.ShowModalDialog(str.ToString());
+            Sitecore.Sites.MultiSitesManager.Flush();
         }
 
-        #endregion overrides
+
     }
 }

@@ -1,0 +1,226 @@
+----item----
+version: 1
+id: {5DFBE726-9996-4E47-9E65-4157727B5B0D}
+database: master
+path: /sitecore/templates/Branches/System/Site branches/Site/$name
+parent: {307C70D4-43AA-4D03-8C23-86572D958DEF}
+name: $name
+master: {00000000-0000-0000-0000-000000000000}
+template: {E37DA970-1EE9-495B-8B34-911773ADEA82}
+templatekey: Site template
+
+----field----
+field: {81E8CDCF-97F6-4087-8928-B90035A29917}
+name: mode
+key: mode
+content-length: 1
+
+1
+----field----
+field: {322D181D-776B-4CA7-9BB1-FAE2009D59B8}
+name: name
+key: name
+content-length: 5
+
+$name
+----field----
+field: {8DA61799-7965-40AD-8E00-F22D48137585}
+name: database
+key: database
+content-length: 3
+
+web
+----field----
+field: {1925AF73-0EF8-49E8-8A8B-DEE8907A2F53}
+name: domain
+key: domain
+content-length: 8
+
+extranet
+----field----
+field: {FCB39913-B34B-4F91-A0B1-4284FC50BEFB}
+name: language
+key: language
+content-length: 38
+
+{AF584191-45C9-4201-8740-5409F4CF8BDD}
+----field----
+field: {D7C619B3-88AA-43C0-A42E-58059F66CDBA}
+name: physicalFolder
+key: physicalfolder
+content-length: 1
+
+/
+----field----
+field: {801A7C39-CEE4-4BC6-9C60-EEB91CAB0E46}
+name: rootPath
+key: rootpath
+content-length: 17
+
+/sitecore/content
+----field----
+field: {D54E341A-A54F-422C-A484-2B9855501D74}
+name: startItem
+key: startitem
+content-length: 5
+
+/home
+----field----
+field: {9DB2AF5F-E0E6-4FCC-82C8-F0ED9874ABAF}
+name: virtualFolder
+key: virtualfolder
+content-length: 1
+
+/
+----field----
+field: {4D353AC3-E0F1-453A-8CEA-43706CA0E730}
+name: cacheHtml
+key: cachehtml
+content-length: 1
+
+1
+----field----
+field: {37E99FC5-4D1C-469D-A4F3-020812F95421}
+name: filteredItemsCacheSize
+key: filtereditemscachesize
+content-length: 3
+
+2MB
+----field----
+field: {864C9229-A5A7-4DA2-8F35-519CAFF185B1}
+name: htmlCacheSize
+key: htmlcachesize
+content-length: 4
+
+10MB
+----field----
+field: {B864D75B-DF71-4C84-AABB-53AA2F915633}
+name: registryCacheSize
+key: registrycachesize
+content-length: 1
+
+0
+----field----
+field: {E9D5C302-B1F2-4AD7-8DFC-1498EC161A84}
+name: viewStateCacheSize
+key: viewstatecachesize
+content-length: 1
+
+0
+----field----
+field: {2E61F2FF-4BDA-4C44-8121-B29798CF50A0}
+name: xslCacheSize
+key: xslcachesize
+content-length: 3
+
+5MB
+----field----
+field: {21099DC0-8CC4-44CA-B9C0-BDE887402241}
+name: allowDebug
+key: allowdebug
+content-length: 1
+
+1
+----field----
+field: {56559C81-F7BE-4C9B-A001-55431E59AC04}
+name: enableDebugger
+key: enabledebugger
+content-length: 1
+
+1
+----field----
+field: {F059CA86-4A18-42A1-A911-DBC1ECF313D6}
+name: enablePreview
+key: enablepreview
+content-length: 1
+
+1
+----field----
+field: {35AE0088-1805-4698-8D99-2C99541F9E4D}
+name: enableWebEdit
+key: enablewebedit
+content-length: 1
+
+1
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+999
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{FF2CF6B0-F22F-414F-8724-A00652C80292}
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: c9a007c6-3d14-469c-b2fa-b0718e88d892
+
+----field----
+field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
+name: __Valid from
+key: __valid from
+content-length: 15
+
+20060207T113300
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20081014T103700
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c9a007c6-3d14-469c-b2fa-b0718e88d892
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100219T144024:634021872249986344
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 0
+
+
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 51
+
+<r owner="sitecore\admin" date="20081014T103756" />

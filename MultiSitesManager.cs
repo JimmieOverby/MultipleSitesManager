@@ -66,6 +66,11 @@ namespace Sitecore.Sites
         private static readonly Database ContentDatabase = Factory.GetDatabase(Settings.GetSetting("MultiSitesContentDatabase", "master"));
 
         /// <summary>
+        /// true: if culture non specific engligh come from Regional ISO
+        /// </summary>
+        private static readonly bool UseRegionalIsoCodeForEnglish = Settings.GetBoolSetting("UseRegionalIsoCodeForEnglish", true);
+
+        /// <summary>
         /// System sites paths which should be placed after custom sites
         /// </summary>
         private static readonly string[] SystemSitesNames = { "website", "scheduler", "system", "publisher" };
@@ -372,7 +377,7 @@ namespace Sitecore.Sites
                     if (lookupField.TargetItem != null)
                     {
                         string language = lookupField.TargetItem["Regional Iso Code"];
-                        if (string.IsNullOrEmpty(language))
+                        if (string.IsNullOrEmpty(language) || !UseRegionalIsoCodeForEnglish)
                         {
                             language = lookupField.TargetItem["Iso"];
                         }

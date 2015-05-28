@@ -56,23 +56,36 @@
       </WizardFormPage>
 
 
-      <WizardFormLastPage ID="LastPage" Icon="Custom/32x32/recycle.png">
-        <GridPanel Cellpadding="2" Width="100%" Height="100%" Fixed="true">
+      <WizardFormPage ID="LastPage" Icon="Custom/32x32/recycle.png">
+        <WizardFormPadding>
+          <GridPanel Cellpadding="2" Width="100%" Height="100%" Fixed="true">
 
-          <Border GridPanel.Style="padding:0px 0px 16px 0px; font-weight:bold">
-            <Literal Text="The wizard has completed. Click Finish to close the wizard."/>
-          </Border>
+            <Border GridPanel.Style="padding:0px 0px 16px 0px; font-weight:bold">
+              <Literal Text="The wizard has completed. Click Finish to close the wizard."/>
+            </Border>
 
-          <Border GridPanel.Style="padding:0px 0px 2px 0px">
-            <Literal ID="Status"/>
-          </Border>
-          <Border ID="ResultLabel" GridPanel.Style="padding:8px 0px 2px 0px" >
-            <Literal Text="Result:"/>
-          </Border>
+            <Border GridPanel.Style="padding:0px 0px 2px 0px">
+              <Literal ID="Status"/>
+            </Border>
+            <Border>
+              <div class="scCheckGroup">
+                <div>
+                  <Checkbox ID="RestartLocalServer" Header="Restart the Content Management (CM) Sitecore Server." />
+                </div>
+                <div>
+                  <Checkbox ID="RestartRemoteServer" Header="Restart the Content Delivery (CD) Sitecore server." />
+                </div>
+              </div>
+            </Border>
+            <Border ID="ResultLabel" GridPanel.Style="padding:8px 0px 2px 0px" >
+              <Literal Text="Result:"/>
+            </Border>
 
-          <Memo ID="ResultText" ReadOnly="true" Width="100%" Height="100%" GridPanel.Height="100%" />
-        </GridPanel>
-      </WizardFormLastPage>
+            <Memo ID="ResultText" ReadOnly="true" Width="100%" Height="100%" GridPanel.Height="100%" />
+
+          </GridPanel>
+        </WizardFormPadding>
+      </WizardFormPage>
 
     </WizardForm>
   </MultisitesManager.FlushSites>

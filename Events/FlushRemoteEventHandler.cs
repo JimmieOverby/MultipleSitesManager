@@ -24,8 +24,10 @@
  * *********************************************************************** */
 
 using System;
+using System.IO;
 using Sitecore.Diagnostics;
 using Sitecore.Events;
+using Sitecore.IO;
 
 namespace Sitecore.Sites.Events
 {
@@ -38,10 +40,12 @@ namespace Sitecore.Sites.Events
         {
             Assert.ArgumentNotNull(sender, "sender");
             Assert.ArgumentNotNull(args, "args");
-
-            MultiSitesManager.Flush();
+            RestartServer();
         }
-
+        protected void RestartServer()
+        {
+            new FileInfo(FileUtil.MapPath("/web.config")).LastWriteTimeUtc = DateTime.UtcNow;
+        }
         /// <summary>
         /// This method is used to raise the local event
         /// </summary>

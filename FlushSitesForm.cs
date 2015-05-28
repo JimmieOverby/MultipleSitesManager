@@ -1,5 +1,10 @@
 ﻿
 
+using Sitecore.Eventing;
+using Sitecore.Install;
+using Sitecore.Shell.Framework;
+using Sitecore.Sites.Events;
+
 namespace Sitecore.Shell.Applications.Dialogs
 {
     using System;
@@ -20,9 +25,11 @@ namespace Sitecore.Shell.Applications.Dialogs
     using Sitecore.Sites;
     using Sitecore.Publishing;
     using Sitecore.Extensions;
+
     public class FlushSitesForm : WizardForm
     {
         #region fields
+
         //Settings page
         protected Scrollbox SettingsPane;
         protected Groupbox FlushingTargetsPanel;
@@ -37,13 +44,24 @@ namespace Sitecore.Shell.Applications.Dialogs
         //first page
         protected Literal Welcome;
 
+        protected Checkbox RestartLocalServer;
+        /// <summary/>
+        protected Checkbox RestartRemoteServer;
         #endregion
-        protected string JobHandle
+        private bool Cancelling
         {
             get
             {
-                return StringUtil.GetString(base.ServerProperties["JobHandle"]);
+                return MainUtil.GetBool(Context.ClientPage.ServerProperties["__cancelling"], false);
             }
+            set
+            {
+                Context.ClientPage.ServerProperties["__cancelling"] = (value ? 1 : 0);
+            }
+        }
+        protected string JobHandle
+        {
+            get { return StringUtil.GetString(base.ServerProperties["JobHandle"]); }
             set
             {
                 Assert.ArgumentNotNullOrEmpty(value, "value");
@@ -60,6 +78,7 @@ namespace Sitecore.Shell.Applications.Dialogs
 
             }
         }
+
         protected override void ActivePageChanged(string page, string oldPage)
         {
             base.ActivePageChanged(page, oldPage);
@@ -74,6 +93,35 @@ namespace Sitecore.Shell.Applications.Dialogs
                 SheerResponse.SetInnerHtml("PublishingTarget", "");
                 SheerResponse.Timer("StartJob", 10);
             }
+            else if (page == "LastPage")
+            {
+                this.BackButton.Disabled = true;
+
+            }
+        }
+
+        protected override void EndWizard()
+        {
+            if (!this.Cancelling)
+            {
+                // If the event manager is enabled then send the event through the queue
+                // otherwise call the Flush method directly
+                if (EventManager.Enabled)
+                {
+                    if (this.RestartRemoteServer.Checked)
+                    {
+                        // Send event into event queue to let farm instances know its time to refresh some stuff
+                        EventManager.QueueEvent(new FlushRemoteEvent(), true, true);
+                    }
+                    else if (this.RestartLocalServer.Checked)
+                    {
+                        EventManager.QueueEvent(new FlushRemoteEvent(), false, true);
+                    }
+                }
+            }
+            Windows.Close();
+
+
         }
 
         private void BuildCheckList()

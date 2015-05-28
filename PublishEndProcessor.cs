@@ -23,6 +23,9 @@
  *                                                                         *
  * *********************************************************************** */
 
+using System.IO;
+using Sitecore.IO;
+
 namespace Sitecore.Sites
 {
     using System;
@@ -39,8 +42,12 @@ namespace Sitecore.Sites
         public void OnSitesPublished(object obj, EventArgs eventArgs)
         {
             Sitecore.Sites.MultiSitesManager.Flush();
-        }
 
+        }
+        public void RestartServer()
+        {
+            new FileInfo(FileUtil.MapPath("/web.config")).LastWriteTimeUtc = DateTime.UtcNow;
+        }
 
     }
 }

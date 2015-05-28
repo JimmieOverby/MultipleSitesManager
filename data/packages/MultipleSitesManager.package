@@ -1,0 +1,152 @@
+<project site="sandbox8" format="Zip Package" targetfilefolder="wwwroot">
+  <Metadata>
+    <metadata>
+      <PackageName>MultipleSitesManager-4.0</PackageName>
+      <Author>Niket Ashesh</Author>
+      <Version>4.0</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme>If you are upgrading from an existing version Please follow the upgrade instructions on GitHub.
+
+This version removes the publish end pipeline and adds a custom pipeline that triggers server restart. This causes the LinkBuilder to clear its cache</Readme>
+      <Publisher>Alpha Solutions</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/System/Site templates/{1D1B0FD8-ECAD-4561-98CF-7314C3954B1B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site attribute template/{3ED5E8A1-C091-4EFE-8000-69E753399786}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site link template/{B431BCA0-62BA-40FE-926B-D21FC0D548C7}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/{E37DA970-1EE9-495B-8B34-911773ADEA82}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site attribute template/Data/{5F916488-51E8-4F4B-96C2-589E766618F5}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site attribute template/Data/Value/{22CA6880-9481-431F-A7C1-F9D75B8E0F76}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/{BCD15573-FC5B-418E-AD6E-1C9A254A807A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Caching/{C865B649-B764-458B-8E25-6276697692EC}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/{00118FFF-E6C6-48C1-9C46-A1EE550A6D54}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Additional/{432925C1-0AC4-40AB-A5B0-0424954318F4}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/mode/{81E8CDCF-97F6-4087-8928-B90035A29917}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/name/{322D181D-776B-4CA7-9BB1-FAE2009D59B8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/content/{8383C8F7-BE61-4C8D-AD47-74EEDEB7FFFB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/database/{8DA61799-7965-40AD-8E00-F22D48137585}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/domain/{1925AF73-0EF8-49E8-8A8B-DEE8907A2F53}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/hostName/{7184EB4F-48ED-48B8-9873-4A75DECFFA31}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/language/{FCB39913-B34B-4F91-A0B1-4284FC50BEFB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/physicalFolder/{D7C619B3-88AA-43C0-A42E-58059F66CDBA}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/rootPath/{801A7C39-CEE4-4BC6-9C60-EEB91CAB0E46}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/startItem/{D54E341A-A54F-422C-A484-2B9855501D74}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Data/virtualFolder/{9DB2AF5F-E0E6-4FCC-82C8-F0ED9874ABAF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Caching/cacheHtml/{4D353AC3-E0F1-453A-8CEA-43706CA0E730}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Caching/cacheMedia/{E1AED834-2E97-4A5F-AB11-0D75ABDA3B2B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Caching/filteredItemsCacheSize/{37E99FC5-4D1C-469D-A4F3-020812F95421}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Caching/htmlCacheClearLatency/{824ECDD3-3D74-4E43-9FC2-6472DC4A9810}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Caching/htmlCacheSize/{864C9229-A5A7-4DA2-8F35-519CAFF185B1}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Caching/registryCacheSize/{B864D75B-DF71-4C84-AABB-53AA2F915633}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Caching/viewStateCacheSize/{E9D5C302-B1F2-4AD7-8DFC-1498EC161A84}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Caching/xslCacheSize/{2E61F2FF-4BDA-4C44-8121-B29798CF50A0}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/allowDebug/{21099DC0-8CC4-44CA-B9C0-BDE887402241}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/disableClientData/{93C18356-1A50-4185-86F2-60FCCEA223DF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/disableXmlControls/{113250C6-27D3-4D5A-AEB1-F2090EC65190}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/enableAnalytics/{5E945400-DD4B-4C6D-882C-36B73F6CA725}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/enableDebugger/{56559C81-F7BE-4C9B-A001-55431E59AC04}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/enableLinkedItems/{67E23613-6C2F-4493-A365-F5ADBDFECC55}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/enablePreview/{F059CA86-4A18-42A1-A911-DBC1ECF313D6}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/enableWebEdit/{35AE0088-1805-4698-8D99-2C99541F9E4D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/enableWorkflow/{A9C43306-58A4-42F8-A0E1-370A2BE40F02}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/filterItems/{618C6092-1FBF-480B-89E8-8B90AF370FED}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/loginPage/{46C16115-CF16-46C7-B906-BCE2736BC737}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/masterDatabase/{A5EFA3CE-8D52-4A51-A633-97B3690B8828}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/mediaCachePath/{E132C05B-0517-4CE6-8D1A-2D1DD3BAC160}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/port/{0CE5F7CF-6112-43DE-8314-51F5A81D7A45}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/requireLogin/{E517D3A9-3696-40A1-8A2C-40F83BB14311}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/scheme/{3B5F6D6F-6B2A-492A-B66A-9F6EA037A2F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/targetHostName/{5AC2E59C-EB08-4FA6-A2E8-850A7BFA3459}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Options/xmlControlPage/{5CF28478-B354-485E-8FE6-2404125F84B6}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Additional/browserTitle/{3CF7F2BB-7ED2-4F42-978E-3E13D9A0CD0A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Additional/contentLanguage/{8463164D-E295-4A43-807F-E437FB8B26E0}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Additional/contentStartItem/{7A08FDB4-8F72-42FF-BC85-0D11A5AF7AA2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Additional/defaultDevice/{0E6D9E71-D222-4DD5-9CBF-0B78A30C1AE7}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Site templates/Site template/Additional/device/{632EBDB7-404D-4626-B167-B96F5D30F9CF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/System/Site branches/{45A45502-91E9-4836-81F8-0AA054847832}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/System/Site branches/Site attribute/{1F51B1E6-1F55-40F7-A4F1-E37032EFBE10}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/System/Site branches/Site link/{288FD8A3-F445-47E2-97B7-C95423C615FF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/System/Site branches/Site/{307C70D4-43AA-4D03-8C23-86572D958DEF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/System/Site branches/Site attribute/$name/{D7DC7B0E-8258-419A-BAD0-B9C149B02F47}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/System/Site branches/Site link/$name/{C478E461-DA5B-4D27-BF7C-55278AAA2DFD}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/System/Site branches/Site/$name/{5DFBE726-9996-4E47-9E65-4157727B5B0D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/{67E6AF74-8A3F-4E69-B325-32887B63A25F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/shell/{1E1C51CB-FB41-424A-B94F-2F894F7A6AF4}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/login/{6533F745-038A-44C7-91F5-74A25CA1CE79}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/testing/{AAD9F4AC-11B7-4CE1-94A5-CE95B3F1380B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/admin/{CB6E5F3B-A308-4E0A-9770-6053844BAB8C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/service/{CF37ED28-C14A-42DE-80A6-E01015416671}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/modules_shell/{F05305F2-5440-46E7-903B-3E23EA1B2DF5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/modules_website/{66DB1D34-5305-49B4-A8B2-A5ED33641265}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/website/{34F7F2C2-1C92-4DFC-B047-9E83135C1CD3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/scheduler/{C700836A-5680-40C7-8249-A1D32101D245}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/system/{52C508FF-00CC-42B5-B788-3C3D41BFFE76}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Sites/publisher/{7058840D-61A6-4459-ACFE-D54882A615A7}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Configure/MultiSitesManager/{03A00B9C-7175-40EC-8B90-DC6C42B3FEDE}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/MultiSites Manager/{B107B8D2-62E4-4539-AF40-1E2EFA5B3367}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/MultiSites Manager/Flush sites/{34F8F749-65E5-4DA4-BFDD-7FE1485CC91B}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Items</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/MultiSiteManager.config</x-item>
+        <x-item>/bin/MultiSitesManager.dll</x-item>
+        <x-item>/bin/MultiSitesManager.pdb</x-item>
+        <x-item>/sitecore modules/Shell/MultiSitesManager/FlushSites.xml</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root />
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

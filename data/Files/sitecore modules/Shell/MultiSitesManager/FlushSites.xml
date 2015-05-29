@@ -3,7 +3,7 @@
   <MultisitesManager.FlushSites>
     <WizardForm CodeBeside="Sitecore.Shell.Applications.Dialogs.FlushSitesForm,MultiSitesManager">
 
-      <WizardFormFirstPage ID="FirstPage" Icon="Custom/32x32/recycle.png">
+      <WizardFormFirstPage ID="FirstPage" Icon="applications/32x32/recycle.png">
         <Border Class="scWizardWelcomeTitle">
           <Literal ID="Welcome" Text="Welcome to the rescan sites wizard."/>
         </Border>
@@ -18,7 +18,7 @@
         </ul>
       </WizardFormFirstPage>
 
-      <WizardFormPage ID="Settings" Header="Settings" Text="Select the databases. Click next to publish and rescan" Icon="Custom/32x32/recycle.png">
+      <WizardFormPage ID="Settings" Header="Settings" Text="Select the databases. Click next to publish and rescan" Icon="applications/32x32/recycle.png">
         <WizardFormPadding>
           <Scrollbox ID="SettingsPane" Border="none" Background="transparent">
             <Border>
@@ -31,8 +31,8 @@
         </WizardFormPadding>
       </WizardFormPage>
 
-      <WizardFormPage ID="Flushing" Header="Flushing" Text="Please wait while the sites are published and rescanned..." Icon="Custom/32x32/recycle.png">
-        <GridPanel Width="100%">
+      <WizardFormPage ID="Flushing" Header="Flushing" Text="Please wait while the sites are published and rescanned..." Icon="applications/32x32/recycle.png">
+        <Scrollbox Width="100%">
           <Space Height="64"/>
 
           <ThemedImage Src="Custom/48x48/recycle.png" Width="48" Height="48" GridPanel.Align="center"/>
@@ -52,26 +52,30 @@
           <Border ID="PublishingTarget" Align="center" GridPanel.Align="center">
             &#160;
           </Border>
-        </GridPanel>
+        </Scrollbox>
       </WizardFormPage>
 
 
-      <WizardFormPage ID="LastPage" Icon="Custom/32x32/recycle.png">
+      <WizardFormPage ID="LastPage" Icon="applications/32x32/recycle.png">
         <WizardFormPadding>
           <GridPanel Cellpadding="2" Width="100%" Height="100%" Fixed="true">
 
             <Border GridPanel.Style="padding:0px 0px 16px 0px; font-weight:bold">
-              <Literal Text="The wizard has completed. Click Finish to close the wizard."/>
+              <Literal Text="The sites have been sucessfully deployed to selected targets."/>
             </Border>
 
-            <Border GridPanel.Style="padding:0px 0px 2px 0px">
-              <Literal ID="Status"/>
-            </Border>
-            <Border>
+
+            <Border GridPanel.Style="padding:0px 0px 16px 0px;">
+              <Border GridPanel.Style="padding:10px;">
+                <Literal Text="Please select the servers to restart. This is required if you have added a new site or updated any settings like host, target host name etc.
+                       (This is needed to clear LinkBuilder's cache) "/>
+              </Border>
               <div class="scCheckGroup">
+                <Space Height="16"/>
                 <div>
                   <Checkbox ID="RestartLocalServer" Header="Restart the Content Management (CM) Sitecore Server." />
                 </div>
+                <Space Height="16"/>
                 <div>
                   <Checkbox ID="RestartRemoteServer" Header="Restart the Content Delivery (CD) Sitecore server." />
                 </div>
@@ -80,7 +84,9 @@
             <Border ID="ResultLabel" GridPanel.Style="padding:8px 0px 2px 0px" >
               <Literal Text="Result:"/>
             </Border>
-
+            <Border GridPanel.Style="padding:0px 0px 2px 0px">
+              <Literal ID="Status"/>
+            </Border>
             <Memo ID="ResultText" ReadOnly="true" Width="100%" Height="100%" GridPanel.Height="100%" />
 
           </GridPanel>

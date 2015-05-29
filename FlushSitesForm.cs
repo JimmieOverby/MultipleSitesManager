@@ -108,15 +108,11 @@ namespace Sitecore.Shell.Applications.Dialogs
                 // otherwise call the Flush method directly
                 if (EventManager.Enabled)
                 {
-                    if (this.RestartRemoteServer.Checked)
-                    {
-                        // Send event into event queue to let farm instances know its time to refresh some stuff
-                        EventManager.QueueEvent(new FlushRemoteEvent(), true, true);
-                    }
-                    else if (this.RestartLocalServer.Checked)
-                    {
-                        EventManager.QueueEvent(new FlushRemoteEvent(), false, true);
-                    }
+
+                    // Send event into event queue to let farm instances know its time to refresh some stuff
+                    EventManager.QueueEvent(new FlushRemoteEvent(this.RestartRemoteServer.Checked), true, false);
+
+                    EventManager.QueueEvent(new FlushRemoteEvent(this.RestartLocalServer.Checked), false, true);
                 }
             }
             Windows.Close();

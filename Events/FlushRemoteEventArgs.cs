@@ -30,12 +30,20 @@ namespace Sitecore.Sites.Events
 {
     public class FlushRemoteEventArgs : EventArgs, IPassNativeEventArgs
     {
+        public bool RestartServer
+        {
+            get;
+            protected set;
+        }
+
         /// <summary>
         /// This is the object stored in the event queue for processing
         /// </summary>
         /// <param name="event">The event</param>
+        /// <param name="restartServer"></param>
         public FlushRemoteEventArgs(FlushRemoteEvent @event)
         {
+            RestartServer = @event.RestartServer;
         }
     }
 }

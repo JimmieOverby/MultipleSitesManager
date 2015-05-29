@@ -32,6 +32,7 @@ namespace Sitecore.Sites
     /// <summary>
     /// Defines publish:end event
     /// </summary>
+    [Obsolete("Deprecated: Please use the new event multisitesmanager:flush:remote")]
     public class PublishEndProcessor
     {
         /// <summary>
@@ -44,10 +45,5 @@ namespace Sitecore.Sites
             Sitecore.Sites.MultiSitesManager.Flush();
 
         }
-        public void RestartServer()
-        {
-            new FileInfo(FileUtil.MapPath("/web.config")).LastWriteTimeUtc = DateTime.UtcNow;
-        }
-
     }
 }

@@ -40,7 +40,12 @@ namespace Sitecore.Sites.Events
         {
             Assert.ArgumentNotNull(sender, "sender");
             Assert.ArgumentNotNull(args, "args");
-            RestartServer();
+            var restartServer = ((FlushRemoteEventArgs)args).RestartServer;
+            MultiSitesManager.Flush();
+            if (restartServer)
+            {
+                RestartServer();
+            }
         }
         protected void RestartServer()
         {

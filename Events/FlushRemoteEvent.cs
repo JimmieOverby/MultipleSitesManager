@@ -33,5 +33,15 @@ namespace Sitecore.Sites.Events
     [DataContract]
     public class FlushRemoteEvent
     {
+        public FlushRemoteEvent(bool restartServer)
+        {
+            RestartServer = restartServer;
+        }
+        [DataMember]
+        public bool RestartServer
+        {
+            get;
+            protected set;
+        }
     }
 }

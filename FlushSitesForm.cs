@@ -115,7 +115,7 @@ namespace Sitecore.Shell.Applications.Dialogs
                     EventManager.QueueEvent(new FlushRemoteEvent(this.RestartLocalServer.Checked), false, true);
                 }
             }
-            Windows.Close();
+           Sitecore.Shell.Framework.Windows.Close();
 
 
         }

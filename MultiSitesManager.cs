@@ -89,11 +89,6 @@ namespace Sitecore.Sites
         /// </summary>
         private static bool IsFirstScan = true;
 
-        /// <summary>
-        /// Used to ensure first scan only runs once
-        /// </summary>
-        static readonly object firstScanLock = new object();
-
         #endregion static fields
 
         #region public properties
@@ -215,13 +210,8 @@ namespace Sitecore.Sites
         {
             using (new SecurityModel.SecurityDisabler())
             {
-                if (!IsFirstScan)
-                    return;
-                lock (firstScanLock)
+                if (IsFirstScan)
                 {
-                    if (!IsFirstScan)
-                        return;
-                        
                     AddCustomSites();
 
                     ArrangeSitesContext();
@@ -238,6 +228,8 @@ namespace Sitecore.Sites
                 }
             }
         }
+
+
 
         #endregion public API
 

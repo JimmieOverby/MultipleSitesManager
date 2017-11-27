@@ -23,6 +23,8 @@
  *                                                                         *
  * *********************************************************************** */
 
+using Sitecore.Data.Events;
+
 namespace Sitecore.Sites
 {
     using System.Collections;
@@ -184,7 +186,10 @@ namespace Sitecore.Sites
             // Change items index
             if (SystemSiteDefinitions != null)
             {
-                Items.MoveLast(SystemSiteDefinitions);
+                using (new EventDisabler())
+                {
+                    Items.MoveLast(SystemSiteDefinitions);
+                }
             }
 
             SitesOrders.Clear();
